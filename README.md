@@ -60,14 +60,31 @@ s.n. dasgupta
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+ file1 file2 differ: byte 1, line 1
+
 comm file1 file2
  ## OUTPUT
- file1 file2 differ: char 1, line 1
+	anil aggarwal
+	barun sengupta
+chanchal singhvi
+		c.k. shukla
+	lalit chowdury
+		s.n. dasgupta
+sumit chakrobarty
+
 
  
 diff file1 file2
 ## OUTPUT
+1c1,2
+< chanchal singhvi
+---
+> anil aggarwal
+> barun sengupta
+2a4
+> lalit chowdury
+4d5
+< sumit chakrobarty
 
 
 #Filters
@@ -224,19 +241,26 @@ Linux is world number 1
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
+Linux is world number 1
+
 
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+Linux is best in this World
 
 egrep l{2} newfile
 ## OUTPUT
+Hello world
+hello world
 
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
+Linux is world number 1
+Unix is predecessor
+Linux is best in this World
 
 
 cat > file23
@@ -524,6 +548,7 @@ chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
+baseball is less than hockey
 
 
 # check file ownership
