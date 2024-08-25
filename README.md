@@ -64,9 +64,10 @@ cmp file1 file2
 ## OUTPUT
 ```
  file1 file2 differ: byte 1, line 1
-
+```
 comm file1 file2
  ## OUTPUT
+ ```
 	anil aggarwal
 	barun sengupta
 chanchal singhvi
@@ -579,7 +580,11 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
+```
+hello in this world
+i cant stop
+for this non stop movement
+```
 
 cat < scriptest.sh 
 ```bash
@@ -617,11 +622,24 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
+```
+File name is  scriptest.sh
+“First arg. is ” 1
+“Second arg. is ” 2
+“Third arg. is ” 3
+“Fourth arg. is ”
+The $@ is  1 2 3
+The $\# is  1#
+The $$ is  3766
 
+```
  
 ls file1
 ## OUTPUT
+```
+file1
 
+```
 echo $?
 ## OUTPUT 
 ./one
@@ -629,11 +647,12 @@ bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
- 
+```
+127
+```
 abcd
  
-echo $?
- ## OUTPUT
+
 
 
  
